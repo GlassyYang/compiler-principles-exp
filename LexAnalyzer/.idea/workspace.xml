@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c69a0d4f-7836-4ec7-9cbf-88c4e4fcaffc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../GrammerAnalyzer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GrammerAnalyzer/src/displayer/Displayer.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GrammerAnalyzer/src/displayer/Displayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/file/grammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/file/grammer.lext" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/file/test.s" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/file/test.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/file/testGrammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/file/testGrammer.lext" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/analyzer/GrammerTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/src/analyzer/GrammerAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/src/analyzer/GrammerAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/src/analyzer/GrammerTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/src/analyzer/GrammerTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LexAnalyzer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexAnalyzer/Analyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexAnalyzer/Analyzer$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexAnalyzer/Analyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexAnalyzer/Analyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LexAnalyzer/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LexAnalyzer/Displayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Analyzer.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Analyzer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="224" column="13" lean-forward="true" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#fillTable#0;class#Analyzer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file/trans.lext">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2280">
+              <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file/test.s">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Displayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Displayer.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>A-Z</find>
+      <find>f</find>
+      <find>0-9</find>
+      <find>print</find>
+      <find>Character</find>
+      <find>i++</find>
+      <find>acceptStateIndex</find>
+      <find>source.substring</find>
+      <find>charBuf.delete</find>
+      <find>delete</find>
+      <find>errorList.add</find>
+      <find>charBuf.setLength(0);</find>
+      <find>Unrecog</find>
+      <find>character</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/file/trans.lext" />
+        <option value="$PROJECT_DIR$/file/test.s" />
+        <option value="$PROJECT_DIR$/src/Displayer.form" />
+        <option value="$PROJECT_DIR$/src/Displayer.java" />
+        <option value="$PROJECT_DIR$/src/Analyzer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-161" />
+    <option name="y" value="-13" />
+    <option name="width" value="1346" />
+    <option name="height" value="566" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LexAnalyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LexAnalyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LexAnalyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LexAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LexAnalyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LexAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553783798397" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Displayer">
+    <configuration name="Analyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Analyzer" />
+      <module name="LexAnalyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Displayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Displayer" />
+      <module name="LexAnalyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Displayer" />
+        <item itemvalue="Application.Analyzer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c69a0d4f-7836-4ec7-9cbf-88c4e4fcaffc" name="Default Changelist" comment="" />
+      <created>1553778107872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553778107872</updated>
+      <workItem from="1553778111753" duration="5684000" />
+      <workItem from="1553844017292" duration="90000" />
+      <workItem from="1553844305097" duration="538000" />
+      <workItem from="1553866369426" duration="26000" />
+      <workItem from="1553866584109" duration="137000" />
+      <workItem from="1555050913889" duration="3127000" />
+      <workItem from="1555072202626" duration="7613000" />
+      <workItem from="1555116045805" duration="646000" />
+      <workItem from="1555139333993" duration="7936000" />
+      <workItem from="1555160825987" duration="13114000" />
+      <workItem from="1555211433064" duration="2245000" />
+      <workItem from="1555485775521" duration="5826000" />
+      <workItem from="1555974867788" duration="137000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="47119000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27272728" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.s" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="source.charAt(i)" language="JAVA" />
+        <watch expression="transformTable[3]['n' - tableBase]" language="JAVA" />
+        <watch expression="transformTable[41][curChar - tableBase]" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>transformTable[41][curChar - tableBase]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>transformTable[curState][curChar - tableBase]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>source.charAt(i)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>acceptList[nextState]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>transformTable[3]['n' - tableBase]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>transformTable[0]['i' - tableBase]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Character.isWhitespace(' ')</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>blocks</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/module-info.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/File.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/BufferedReader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Integer.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/String.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Character.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/StringBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/Analyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="224" column="13" lean-forward="true" selection-start-line="224" selection-start-column="13" selection-end-line="224" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fillTable#0;class#Analyzer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/trans.lext">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/test.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Displayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Displayer.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+  </component>
+</project>

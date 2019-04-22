@@ -20,14 +20,25 @@ public class GrammerTree {
         child.add(tree);
     }
 
+    public GrammerAnalyzer.Token getValue() {
+        return value;
+    }
+
     /**
      * 采用递归方式打印语法树
      * @param root
      */
-    static void printTree(GrammerTree root, StringBuilder output){
+    public static void printTree(GrammerTree root, StringBuilder output){
+        print(root, output, 0);
+    }
+    private static void print(GrammerTree root, StringBuilder output, int line){
+        for(int i = 0; i < line; i++){
+            output.append("  ");
+        }
         output.append(root.value);
+        output.append("\r\n");
         for(GrammerTree tree : root.child){
-            printTree(tree, output);
+            print(tree, output, line+1);
         }
     }
 

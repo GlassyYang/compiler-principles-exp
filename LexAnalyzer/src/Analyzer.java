@@ -86,7 +86,7 @@ public class Analyzer {
     }
 
     //这儿少一个分析函数
-    public void analyze(String source, DefaultTableModel tokenList, Vector<String> errorList) {
+    void analyze(String source, DefaultTableModel tokenList, Vector<String> errorList) {
         int i = 0;
         StringBuilder charBuf = new StringBuilder();
         int curState = 0;
@@ -98,7 +98,7 @@ public class Analyzer {
             curChar = source.charAt(i++);
             //空白符代表着一段标识的结束，不能忽略
             if (Character.isWhitespace(curChar)) {
-                if (curChar == '\n') {
+                if(curChar == '\n'){
                     line++;
                 }
                 if (charBuf.length() != 0) {
@@ -128,9 +128,9 @@ public class Analyzer {
             curState = transformTable[curState][curChar - tableBase];
             //进行分情况讨论
             System.out.println(curState);
-            if (curState == -2) {
+            if(curState == -2){
                 charBuf.append(curChar);
-                while (i < source.length() && !Character.isWhitespace(source.charAt(i))) {
+                while(i < source.length() && !Character.isWhitespace(source.charAt(i))){
                     charBuf.append(source.charAt(i));
                     i++;
                 }
@@ -187,14 +187,14 @@ public class Analyzer {
             }
         }
         //最后检查一下缓冲区是不是空的，如果不是就说明还有别的东西
-        if (charBuf.length() != 0) {
-            if (acceptList[curState] != null) {
+        if(charBuf.length() != 0){
+            if(acceptList[curState] != null){
                 addToken(tokenList, curState, charBuf.toString());
-            } else if (acceptState != -1) {
+            }else if(acceptState != -1){
                 errorList.add(String.format("Unrecognized string %s at line %d", charBuf.substring(acceptStateBufIndex, charBuf.length()), line));
                 charBuf.delete(acceptStateBufIndex, charBuf.length());
                 addToken(tokenList, acceptState, charBuf.toString());
-            } else {
+            }else{
                 errorList.add(String.format("Unrecognized string %s at line %d", charBuf.toString(), line));
             }
         }
@@ -207,7 +207,7 @@ public class Analyzer {
         model.addRow(row);
     }
 
-    public void showTransformTable(DefaultTableModel model) {
+    void showTransformTable(DefaultTableModel model) {
         String[] row = new String[charaNum + 1];
         row[0] = "状态";
         for (int i = 0; i < charaNum; i++) {
@@ -227,7 +227,7 @@ public class Analyzer {
         }
     }
 
-    public static Analyzer getInstance(String filepath) {
+    static Analyzer getInstance(String filepath) {
         Analyzer analyzer = new Analyzer();
         if (analyzer.parseTransformTable(filepath)) {
             return analyzer;
@@ -239,16 +239,16 @@ public class Analyzer {
         final private String identifier;
         final private boolean needValue;
 
-        public State(String identifier, boolean needValue) {
+        State(String identifier, boolean needValue) {
             this.identifier = identifier;
             this.needValue = needValue;
         }
 
-        public String getIdentifier() {
+        String getIdentifier() {
             return identifier;
         }
 
-        public boolean isNeedValue() {
+        boolean isNeedValue() {
             return needValue;
         }
     }
@@ -256,11 +256,10 @@ public class Analyzer {
     /**
      * 此方法用于测试
      *
-     * @param args
+     * @param args 控制台参数，没用。该死的intellij非要让我写
      */
     public static void main(String[] args) {
         Analyzer any = new Analyzer();
         any.parseTransformTable("./file/trans.lext");
     }
 }
-
