@@ -6,24 +6,22 @@ import analyzer.GrammerTree;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Vector;
 
 public class Displayer {
-    private JTextField resOutput;
+    private JTextArea resOutput;
     private JTable transformTable;
     private JPanel root;
     private JButton showTransform;
     private JButton seeSourceCode;
     private JButton grammerAnalyze;
-    private JList errorOutput;
+    private JList<String> errorOutput;
 
-    GrammerAnalyzer analyzer;
-    JFrame parent;
+    private GrammerAnalyzer analyzer;
+    private JFrame parent;
 
-    DefaultTableModel transModel;
-    public Displayer(GrammerAnalyzer analyzer, JFrame parent) {
+    private DefaultTableModel transModel;
+    private Displayer(GrammerAnalyzer analyzer, JFrame parent) {
         this.analyzer = analyzer;
         this.parent = parent;
         showTransform.addActionListener((e)-> {
@@ -48,10 +46,8 @@ public class Displayer {
                 StringBuilder build = new StringBuilder();
                 GrammerTree.printTree(tree, build);
                 resOutput.setText(build.toString());
-                System.out.println(build.toString());
             }catch(IOException err){
                 JOptionPane.showMessageDialog(parent, err.getMessage(), "错误", JOptionPane.ERROR_MESSAGE);
-                return;
             }
         });
     }

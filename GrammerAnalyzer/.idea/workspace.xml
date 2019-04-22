@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae47adc2-12cd-4d6b-a18d-07f0559b9aca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/displayer/Displayer.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/displayer/Displayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/grammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/file/grammer.lext" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/test.s" beforeDir="false" afterPath="$PROJECT_DIR$/file/test.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/testGrammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/file/testGrammer.lext" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/GrammerTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/GrammerTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LexAnalyzer/LexAnalyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../LexAnalyzer/.idea/LexAnalyzer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/displayer/Displayer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayer/Displayer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/displayer/Displayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayer/Displayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,17 +21,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="623" column="24" selection-start-line="623" selection-start-column="24" selection-end-line="623" selection-end-column="24" />
+            <state relative-caret-position="258">
+              <caret line="725" lean-forward="true" selection-start-line="725" selection-end-line="725" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#ItemSet#0;class#GrammerAnalyzer#0" />
                 <element signature="method#fillTable#0;class#LexAnalyzer#0;class#GrammerAnalyzer#0" />
-                <element signature="e#20111#20112#0" expanded="true" />
-                <element signature="e#20142#20143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="360">
+              <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,9 +48,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="105">
               <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -80,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file/grammer.lext">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
+            <state relative-caret-position="30">
               <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
@@ -95,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file/test2.s">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -108,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/file/test.s">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -124,8 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showTrans</find>
-      <find>setSource</find>
       <find>gotoTableG</find>
       <find>gotoTable</find>
       <find>token</find>
@@ -149,11 +134,13 @@
       <find>gotoNext</find>
       <find>parseExp</find>
       <find>null</find>
-      <find>translate</find>
       <find>node</find>
       <find>line</find>
       <find>symbol</find>
       <find>analyze</find>
+      <find>analyzer</find>
+      <find>System.out</find>
+      <find>translate</find>
     </findStrings>
     <replaceStrings>
       <replace>addError</replace>
@@ -172,20 +159,20 @@
         <option value="$PROJECT_DIR$/file/trans.lext" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/file/testGrammer.lext" />
-        <option value="$PROJECT_DIR$/src/displayer/Displayer.form" />
         <option value="$PROJECT_DIR$/file/test.s" />
         <option value="$PROJECT_DIR$/file/test3.s" />
         <option value="$PROJECT_DIR$/src/analyzer/GrammerTree.java" />
         <option value="$PROJECT_DIR$/file/test4.s" />
-        <option value="$PROJECT_DIR$/src/displayer/Displayer.java" />
         <option value="$PROJECT_DIR$/file/grammer.lext" />
         <option value="$PROJECT_DIR$/file/grammer2.lext" />
         <option value="$PROJECT_DIR$/file/test2.s" />
+        <option value="$PROJECT_DIR$/src/displayer/Displayer.form" />
+        <option value="$PROJECT_DIR$/src/displayer/Displayer.java" />
         <option value="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-161" />
     <option name="y" value="-13" />
     <option name="width" value="1346" />
@@ -197,7 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,11 +214,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="displayer" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GrammerAnalyzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GrammerAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="displayer" type="462c0819:PsiDirectoryNode" />
+              <item name="Displayer" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,11 +327,12 @@
       <workItem from="1555797937230" duration="29382000" />
       <workItem from="1555961221730" duration="9162000" />
       <workItem from="1555973171962" duration="1550000" />
+      <workItem from="1555976365056" duration="632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77831000" />
+    <option name="totallyTimeSpent" value="78463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,8 +345,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49444443" visible="true" weight="0.2931818" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49444443" visible="true" weight="0.2977273" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -360,7 +356,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5036675" side_tool="true" weight="0.2840909" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2676519" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2676519" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22167487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,33 +420,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java</url>
-          <line>781</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java</url>
-          <line>162</line>
+          <line>158</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/displayer/Displayer.java</url>
-          <line>78</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java</url>
-          <line>171</line>
-          <properties />
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java</url>
-          <line>229</line>
-          <properties />
-          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -649,9 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/test3.s">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -661,23 +636,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/file/test4.s">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/test.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file/testGrammer.lext">
       <provider selected="true" editor-type-id="text-editor">
@@ -702,7 +660,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="105">
           <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -712,22 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/file/grammer.lext">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
+        <state relative-caret-position="30">
           <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="623" column="24" selection-start-line="623" selection-start-column="24" selection-end-line="623" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#ItemSet#0;class#GrammerAnalyzer#0" />
-            <element signature="method#fillTable#0;class#LexAnalyzer#0;class#GrammerAnalyzer#0" />
-            <element signature="e#20111#20112#0" expanded="true" />
-            <element signature="e#20142#20143#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,10 +682,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/file/test.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/file/test2.s">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="725" lean-forward="true" selection-start-line="725" selection-end-line="725" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#ItemSet#0;class#GrammerAnalyzer#0" />
+            <element signature="method#fillTable#0;class#LexAnalyzer#0;class#GrammerAnalyzer#0" />
+          </folding>
         </state>
       </provider>
     </entry>

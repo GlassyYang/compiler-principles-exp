@@ -90,13 +90,10 @@ public class GrammerAnalyzer {
             getClosure(newItemSet);
             if (!itemSetList.contains(newItemSet)) {
                 //这样做的原因是检查空产生式是否加入到了新的项目集中
-                if(reduceItem == null){
-                    for(Item item : newItemSet.itemSet){
-                        if(item.arriveReduce()){
+                if (reduceItem == null) {
+                    for (Item item : newItemSet.itemSet) {
+                        if (item.arriveReduce()) {
                             reduceItem = item;
-                            System.out.print(item.head);
-                            System.out.print("->");
-                            System.out.println(item.body.get(0));
                         }
                     }
                 }
@@ -107,7 +104,6 @@ public class GrammerAnalyzer {
                     int temp = reduceItem.index;
                     reduceItem.index = 0;
                     int index = grammerList.indexOf(reduceItem);
-//                    System.out.println(index);
                     assert index != -1;
                     reduceItem.index = temp;
                     Arrays.fill(row, (byte) -(index + 1));
@@ -168,15 +164,11 @@ public class GrammerAnalyzer {
         Stack<GrammerTree> node = new Stack<>();
         node.push(new GrammerTree(new Token("$")));
         while ((token = lexAnalyzer.nextToken()) != null) {
-            if(token.name == "$"){
-                System.out.println("sd");//这儿是一个手动设置的断点
-            }
             if (token.isError()) {
                 errorList.add(token.value);
                 continue;
             }
             int index = findSymbolIndex(token.name);
-            System.out.println(token.name);
             int nextStep = gotoTable.get(state.peek())[index];
             if (nextStep > 0) {
                 state.push(nextStep - 1);
@@ -185,7 +177,7 @@ public class GrammerAnalyzer {
                 node.push(tree);
             } else if (nextStep < 0) {
                 Item item = grammerList.get(-nextStep - 1);
-                if(item.head.equals("Z")){
+                if (item.head.equals("Z")) {
                     //当推导到程序定义的符号Z时，就认为其已经结束了翻译
                     break;
                 }
@@ -197,17 +189,13 @@ public class GrammerAnalyzer {
                         state.pop();
                         sym.pop();
                     } else {
-                        //TODO 这儿产生了一个错误，暂时认为其为内部错误；
+                        //这儿产生了一个错误，暂时认为其为内部错误；
                         errorList.add("Inner error!");
                         return null;
                     }
                 }
                 sym.push(item.head);
                 int temp = gotoTable.get(state.peek())[findSymbolIndex(item.head)] - 1;
-                if (temp < 0) {
-                    //TODO 检测到错误
-
-                }
                 state.push(temp);
                 Token newToken = new Token(item.head, "");
                 newToken.line = token.line;
@@ -218,7 +206,7 @@ public class GrammerAnalyzer {
                 node.push(tree);
                 lexAnalyzer.tokenGoBack();
             } else {
-                //TODO 这儿输出了一个错误，需要进行错误处理
+                //这儿输出了一个错误，需要进行错误处理
                 String errorMsg = "Unrecognized symbol %s, at line %d";
                 if (token.value.isEmpty()) {
                     errorList.add(String.format(errorMsg, token.name, token.line));
@@ -227,13 +215,6 @@ public class GrammerAnalyzer {
                 }
             }
         }
-        System.out.println(node.size());
-//        if (sym.size() != 1 || !sym.peek().equals("Z")) {
-//            errorList.add("Symbol missed");
-//            return null;
-//        } else {
-//            return node.peek();
-//        }
         return node.peek();
     }
 
@@ -610,7 +591,7 @@ public class GrammerAnalyzer {
             return tokenList.get(index++);
         }
 
-        void tokenGoBack(){
+        void tokenGoBack() {
             index--;
         }
 
@@ -656,8 +637,6 @@ public class GrammerAnalyzer {
                     continue;
                 }
                 curState = transformTable[curState][curChar - tableBase];
-                //进行分情况讨论
-//                System.out.println(curState);
                 if (curState == -2) {
                     charBuf.append(curChar);
                     while (i < sourceCode.length() && !Character.isWhitespace(sourceCode.charAt(i))) {
@@ -737,17 +716,12 @@ public class GrammerAnalyzer {
             String val = (acceptList[state].isNeedValue()) ? value : "";
             Token token = new Token(name, val);
             token.line = line;
-            synchronized (tokenList) {
-                tokenList.add(token);
-            }
-
+            tokenList.add(token);
         }
 
         private void addError(String errorMsg) {
             Token token = new Token(errorMsg);
-            synchronized (tokenList) {
-                tokenList.add(token);
-            }
+            tokenList.add(token);
         }
 
         class State {

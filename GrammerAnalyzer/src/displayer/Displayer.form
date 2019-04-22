@@ -104,11 +104,9 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="2b448" class="javax.swing.JTextField" binding="resOutput">
+                      <component id="b867c" class="javax.swing.JTextArea" binding="resOutput">
                         <constraints/>
-                        <properties>
-                          <editable value="false"/>
-                        </properties>
+                        <properties/>
                       </component>
                     </children>
                   </scrollpane>
