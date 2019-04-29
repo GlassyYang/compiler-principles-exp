@@ -267,8 +267,11 @@ public class GrammerAnalyzer {
         }
     }
 
+    //表示一个产生式，以及LR(0)中的项
     class Item {
+        //存储产生式的头部
         private String head;
+        //存储产生式的身体部位
         private List<String> body;
         //index 代表点当前所在的位置;
         private int index;
@@ -282,7 +285,7 @@ public class GrammerAnalyzer {
             this.body = item.body;
             this.index = 0;
         }
-
+        //将grammer.lext文件中文法的一行翻译成机器的内部表示
         boolean parseExp(String genExp) {
             String[] parts = genExp.split("\\s*->\\s*");
             if (parts.length != 2 || parts[0].length() != 1 || parts[1].length() < 1) {
@@ -308,9 +311,6 @@ public class GrammerAnalyzer {
                     this.body.add(Character.toString(body.charAt(i)));
                 }
             }
-//            if(this.body.size() == 1 && this.body.get(0).isEmpty()){
-//                this.index = 1;
-//            }
             return true;
         }
 
@@ -443,6 +443,14 @@ public class GrammerAnalyzer {
             this.contain = TOKEN;
         }
 
+        String getName() {
+            return name;
+        }
+
+        String getValue(){
+            return value;
+        }
+        int getLine(){return line;}
         boolean isError() {
             return this.contain == ERROR;
         }
