@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22980bc-b4cd-44c2-9035-c654a762a5a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/grammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/file/grammer.lext" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/test2.s" beforeDir="false" afterPath="$PROJECT_DIR$/file/test2.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/GrammerAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer$BCompAttr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer$BCompAttr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer$CompAttr.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer$CompAttr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SemanticAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SymbolTable$TableItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/SymbolTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/analyzer/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompilerFreground/displayer/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompilerFreground/displayer/Displayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/SemanticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/SemanticAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayer/Displayer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayer/Displayer.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/displayer/Displayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayer/Displayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GrammerAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GrammerAnalyzer/out/production/GrammerAnalyzer/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,23 +31,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-541">
-              <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="174">
+              <caret line="40" column="61" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/analyzer/SemanticAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="102" column="51" lean-forward="true" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+            <state relative-caret-position="489">
+              <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
+                <element signature="e#3151#3152#0" expanded="true" />
                 <element signature="e#3189#3190#0" expanded="true" />
+                <element signature="e#3232#3233#0" expanded="true" />
                 <element signature="e#3263#3264#0" expanded="true" />
+                <element signature="e#21259#21260#0" expanded="true" />
                 <element signature="e#21282#21283#0" expanded="true" />
               </folding>
             </state>
@@ -76,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file/test3.s">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="165">
               <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
@@ -153,9 +137,9 @@
         <option value="$PROJECT_DIR$/file/test2.s" />
         <option value="$PROJECT_DIR$/file/grammer.lext" />
         <option value="$PROJECT_DIR$/src/displayer/Displayer.form" />
-        <option value="$PROJECT_DIR$/src/displayer/Displayer.java" />
         <option value="$PROJECT_DIR$/file/test3.s" />
         <option value="$PROJECT_DIR$/src/analyzer/SemanticAnalyzer.java" />
+        <option value="$PROJECT_DIR$/src/displayer/Displayer.java" />
       </list>
     </option>
   </component>
@@ -171,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,18 +184,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="displayer" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CompilerFreground" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerFreground" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="displayer" type="462c0819:PsiDirectoryNode" />
-              <item name="Displayer" type="e9f4de52:FormNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,16 +247,18 @@
       <workItem from="1556494433658" duration="15974000" />
       <workItem from="1556929422799" duration="34000" />
       <workItem from="1556930367851" duration="20612000" />
+      <workItem from="1557085037815" duration="6000" />
+      <workItem from="1557096382847" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63493000" />
+    <option name="totallyTimeSpent" value="63548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20624049" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21385084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -461,32 +440,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541">
-          <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/test3.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="165">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/analyzer/SemanticAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="102" column="51" lean-forward="true" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+        <state relative-caret-position="489">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding>
+            <element signature="e#3151#3152#0" expanded="true" />
             <element signature="e#3189#3190#0" expanded="true" />
+            <element signature="e#3232#3233#0" expanded="true" />
             <element signature="e#3263#3264#0" expanded="true" />
+            <element signature="e#21259#21260#0" expanded="true" />
             <element signature="e#21282#21283#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/displayer/Displayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="40" column="61" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
         </state>
       </provider>
     </entry>

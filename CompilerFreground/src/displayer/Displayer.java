@@ -38,7 +38,7 @@ public class Displayer {
         });
         seeSourceCode.addActionListener((e)-> {
             try {
-                Runtime.getRuntime().exec("gedit ./file/test2.s");
+                Runtime.getRuntime().exec("gedit ./file/test3.s");
             }catch (IOException err){
                 JOptionPane.showMessageDialog(parent, err.getMessage(), "错误", JOptionPane.ERROR_MESSAGE);
             }
