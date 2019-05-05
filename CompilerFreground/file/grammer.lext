@@ -46,5 +46,5 @@ E->"real"
 E->L
 L->"id""["E"]"
 L->L"["E"]"
-F->F","E
+F->FE
 F->E

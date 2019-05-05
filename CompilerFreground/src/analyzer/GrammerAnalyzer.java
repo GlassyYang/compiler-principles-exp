@@ -610,7 +610,7 @@ public class GrammerAnalyzer {
             char curChar;
             int acceptState = -1;
             int acceptStateBufIndex = -1;
-            int line = 0;
+            int line = 1;
             while (i < sourceCode.length()) {
                 curChar = sourceCode.charAt(i++);
                 //空白符代表着一段标识的结束，不能忽略

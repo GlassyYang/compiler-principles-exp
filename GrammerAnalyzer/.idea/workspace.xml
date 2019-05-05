@@ -7,22 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae47adc2-12cd-4d6b-a18d-07f0559b9aca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/GrammerAnalyzer_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/grammer.lext" beforeDir="false" afterPath="$PROJECT_DIR$/file/grammer.lext" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/grammer2.lext" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/test3.s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/test4.s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file/testGrammer.lext" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$ItemSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$LexAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/analyzer/GrammerAnalyzer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/displayer/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrammerAnalyzer/displayer/Displayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/displayer/Displayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/displayer/Displayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/file/test2.s" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/file/test2.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer$State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$LexAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer$Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/GrammerAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer$BCompAttr.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer$BCompAttr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer$CompAttr.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer$CompAttr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SemanticAnalyzer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SymbolTable$TableItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/SymbolTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/analyzer/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/displayer/Displayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/out/production/CompilerFreground/displayer/Displayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/src/analyzer/GrammerAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/src/analyzer/GrammerAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/src/analyzer/SemanticAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/src/analyzer/SemanticAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/src/displayer/Displayer.form" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/src/displayer/Displayer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CompilerFreground/src/displayer/Displayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CompilerFreground/src/displayer/Displayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrammerAnalyzer/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10005">
+            <state relative-caret-position="10275">
               <caret line="732" column="39" selection-start-line="732" selection-start-column="39" selection-end-line="732" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -167,6 +168,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,11 +282,12 @@
       <workItem from="1556479011359" duration="547000" />
       <workItem from="1556479695048" duration="13000" />
       <workItem from="1556493373376" duration="1058000" />
+      <workItem from="1556568929680" duration="628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82127000" />
+    <option name="totallyTimeSpent" value="82755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -297,9 +300,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49444443" visible="true" weight="0.34170473" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49444443" visible="true" weight="0.347793" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -595,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/analyzer/GrammerAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10005">
+        <state relative-caret-position="10275">
           <caret line="732" column="39" selection-start-line="732" selection-start-column="39" selection-end-line="732" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />

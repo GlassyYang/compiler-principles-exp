@@ -2,14 +2,20 @@ int[12] a;
 float[22] b;
 int a;
 
+struct abd{
+    int a;
+    int b;
+    int[10] c;
+};
+
 function abs(int a int b)
 {
     int temp;
-    int[12] temp;;
+    int[12] temp;
     int[12][13] temp;
     int bc;
-    struct abs c;
-    temp = a + b;
+    struct abd c;
+    temp[1][2] = a + b;
     a = b;
     b = temp;
     temp[11] = a - b;
@@ -30,9 +36,3 @@ function abs(int a int b)
         a = 2;
     }
 }
-
-struct abd{
-    int a;
-    int b;
-    int[10] c;
-};

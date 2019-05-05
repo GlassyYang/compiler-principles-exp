@@ -1,25 +1,41 @@
 package analyzer;
 
+import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
-enum Type {
-    VARIABLE_INT(4),
-    VARIABLE_FLOAT(4),
-    VARIABLE_STRUCT(-1),
-    VARIABLE_ARRAY(-1),
-    FUNCTION(-1);
+class Type {
+    static final int VARIABLE_INT = 1;
+    static final int VARIABLE_FLOAT = 2;
+    static final int VARIABLE_STRUCT = 3;
+    static final int VARIABLE_ARRAY = 4;
+    static final int FUNCTION = 5;
+
     private int width;
-
+    private int type;
     //专为array设计
     private Type containType;
 
-    Type(int width) {
-        this.width = width;
+    Type(int type) {
+        this.type = type;
+        switch (type) {
+            case 1:
+            case 2:
+                width = 4;
+                break;
+            default:
+                width = -1;
+
+        }
     }
 
     int getWidth() {
         return this.width;
+    }
+
+    public int getType() {
+        return type;
     }
 
     void setWidth(int width) {
@@ -39,17 +55,55 @@ public class SemanticAnalyzer {
 
     private SymbolTable root;
 
-    private List<String> codeList;
+    private Vector<String> codeList;
     private String assCode = "(%s, %s, %s, %s)\t\t %4$s = %2$s %1$s %3$s";
     private String conJmpCode = "(%s, %s, %s, %s)\t\t if %2$s %1$s %3$s goto %4$s";
-    private String dirCmpCode = "(goto, _, _, %s)\t\t goto %s";
-    private String paraCode = "(param, _, _, %s)\t\t param %s";
+    private String dirCmpCode = "(goto, _, _, %s)\t\t goto %1$s";
+    private String paraCode = "(param, _, _, %s)\t\t param %1$s";
     private int tempVarNum;
     private StringBuilder varBuild;
-    SemanticAnalyzer() {
-        codeList = new ArrayList<>();
+
+    public SemanticAnalyzer() {
+        codeList = new Vector<>();
         varBuild = new StringBuilder();
         root = new SymbolTable();
+    }
+
+    public void showSymbolTable(DefaultTableModel model) {
+        String[] head = new String[]{"类型", "标识符", "宽度"};
+        model.setColumnIdentifiers(head);
+        showSymbolTable(root, model);
+    }
+
+    private void showSymbolTable(SymbolTable table, DefaultTableModel model) {
+        for (SymbolTable.TableItem item : table.itemList) {
+            String[] row = new String[3];
+            switch (item.type.getType()) {
+                case Type.VARIABLE_FLOAT:
+                    row[0] = "float";
+                    break;
+                case Type.VARIABLE_INT:
+                    row[0] = "float";
+                    break;
+                case Type.FUNCTION:
+                    row[0] = "function";
+                    break;
+                case Type.VARIABLE_ARRAY:
+                    row[0] = "array";
+                    break;
+                case Type.VARIABLE_STRUCT:
+                    row[0] = "struct";
+                    break;
+            }
+            row[1] = item.name;
+            row[2] = Integer.toString(item.type.getWidth());
+            model.addRow(row);
+        }
+        for(SymbolTable.TableItem item : table.itemList){
+            if(item.type.getType() == Type.FUNCTION || item.type.getType() == Type.VARIABLE_STRUCT){
+                showSymbolTable(item.innerTable, model);
+            }
+        }
     }
 
     private String newTemp() {
@@ -60,7 +114,11 @@ public class SemanticAnalyzer {
     }
 
     private int nextCode() {
-        return tempVarNum;
+        return codeList.size();
+    }
+
+    public Vector<String> getCodeList() {
+        return codeList;
     }
 
     private void fillList(List<Integer> codeList, String num, boolean bool) {
@@ -73,25 +131,32 @@ public class SemanticAnalyzer {
         codeList.forEach(e -> {
             String ans = this.codeList.get(e);
             ans = ans.replace(form, num);
-            this.codeList.add(e, ans);
+            this.codeList.set(e, ans);
         });
     }
 
     private Type C(GrammerTree tree, Type eType) {
         List<GrammerTree> child = tree.getChild();
         GrammerAnalyzer.Token token = child.get(0).getValue();
-        Type type = Type.VARIABLE_ARRAY;
+        Type type = new Type(Type.VARIABLE_ARRAY);
         type.setInnerType(eType);
-        try {
-            int length = Integer.parseInt(child.get(1).getValue().getValue());
-            type.setWidth(length * eType.getWidth());
-        } catch (NumberFormatException e) {
-            token = child.get(1).getValue();
-            throw new CodeGenException(String.format("Error at Line %d: cannot parse \"%s\" to integer", token.getLine(), token.getValue()));
-        }
         if (token.getName().equals("[")) {
+            token = child.get(1).getValue();
+            try {
+                int length = Integer.parseInt(token.getValue());
+                type.setWidth(length * eType.getWidth());
+            } catch (NumberFormatException e) {
+                throw new CodeGenException(String.format("Error at Line %d: cannot parse \"%s\" to integer", token.getLine(), token.getValue()));
+            }
             return type;
         } else {
+            token = child.get(2).getValue();
+            try {
+                int length = Integer.parseInt(child.get(2).getValue().getValue());
+                type.setWidth(length * eType.getWidth());
+            } catch (NumberFormatException e) {
+                throw new CodeGenException(String.format("Error at Line %d: cannot parse \"%s\" to integer", token.getLine(), token.getValue()));
+            }
             return C(child.get(0), type);
         }
     }
@@ -101,9 +166,9 @@ public class SemanticAnalyzer {
         GrammerAnalyzer.Token token = child.get(0).getValue();
         String name = token.getName();
         if (name.equals("int")) {
-            return Type.VARIABLE_INT;
+            return new Type(Type.VARIABLE_INT);
         } else if (name.equals("float")) {
-            return Type.VARIABLE_FLOAT;
+            return new Type(Type.VARIABLE_FLOAT);
         } else {
             //需要在符号表中查找该记录声明
             token = child.get(1).getValue();
@@ -112,7 +177,7 @@ public class SemanticAnalyzer {
                 return item.type;
             } else {
                 //发现错误。一旦发现错误停止编译
-                throw new CodeGenException(String.format("Error at line %d: Cannot find symbol \"%s\"",token.getLine(),  token.getValue()));
+                throw new CodeGenException(String.format("Error at line %d: Cannot find symbol \"%s\"", token.getLine(), token.getValue()));
             }
         }
     }
@@ -136,6 +201,9 @@ public class SemanticAnalyzer {
             Type type = T(child.get(0), table);
             //向符号表中添加条目
             token = child.get(1).getValue();
+            if (table.existId(token.getValue())) {
+                throw new CodeGenException(String.format("Error at line %d: Duplicate id define \"%s\"", token.getLine(), token.getValue()));
+            }
             SymbolTable.TableItem item = table.new TableItem(type, token.getValue());
             table.addItem(item);
         }
@@ -149,14 +217,14 @@ public class SemanticAnalyzer {
     private CompAttr L(GrammerTree tree, SymbolTable table) {
         List<GrammerTree> child = tree.getChild();
         GrammerAnalyzer.Token token = child.get(0).getValue();
+        CompAttr e = E(child.get(2), table);
+        if (e.type.getType() != Type.VARIABLE_INT) {
+            throw new CodeGenException(String.format("Error at line %d: float number found, but integer needed.", token.getLine()));
+        }
         if (token.getName().equals("L")) {
-            token = child.get(1).getValue();
-            if (!token.getName().equals("int")) {
-                throw new CodeGenException(String.format("Error at line %d: float number found, but integer needed.", token.getLine()));
-            }
             CompAttr ans = L(child.get(0), table);
             String label = newTemp();
-            codeList.add(String.format(assCode, "*", token.getValue(), Integer.toString(ans.type.getWidth()), label));
+            codeList.add(String.format(assCode, "*", e.value, Integer.toString(ans.type.getWidth()), label));
             String newLabel = newTemp();
             codeList.add(String.format(assCode, "+", label, ans.value, newLabel));
             CompAttr attr = new CompAttr(ans.type.getInnerType(), newLabel);
@@ -165,18 +233,14 @@ public class SemanticAnalyzer {
         } else {
             SymbolTable.TableItem item = table.findItemByName(token.getValue());
             if (item == null) {
-                throw new CodeGenException(String.format("Error at line %d: cannot find symbol \"%s\"",token.getLine(), token.getValue()));
-            } else if (item.type != Type.VARIABLE_ARRAY) {
-                throw new CodeGenException(String.format("Error at line %d: variable must have array type",token.getLine()));
+                throw new CodeGenException(String.format("Error at line %d: cannot find symbol \"%s\"", token.getLine(), token.getValue()));
+            } else if (item.type.getType() != Type.VARIABLE_ARRAY) {
+                throw new CodeGenException(String.format("Error at line %d: \"%s\" isn\'t array type", token.getLine(), token.getValue()));
             } else {
-                Type type = item.type;
+                Type type = item.type.getInnerType();
                 String id = token.getValue();
-                token = child.get(1).getValue();
-                if (!token.getName().equals("int")) {
-                    throw new CodeGenException(String.format("Error at line %d: float number found, but integer needed.", token.getLine()));
-                }
                 String label = newTemp();
-                codeList.add(String.format(assCode, "*", token.getValue(), Integer.toString(type.getWidth()), label));
+                codeList.add(String.format(assCode, "*", e.value, Integer.toString(type.getWidth()), label));
                 CompAttr attr = new CompAttr(type.getInnerType(), label);
                 attr.id = id;
                 return attr;
@@ -195,14 +259,14 @@ public class SemanticAnalyzer {
                 String oper = child.get(1).getValue().getName();
                 codeList.add(String.format(assCode, oper, e1.getValue(), e2.getValue(), label));
                 Type newType;
-                if (e1.type == Type.VARIABLE_FLOAT || e2.type == Type.VARIABLE_FLOAT)
-                    newType = Type.VARIABLE_FLOAT;
+                if (e1.type.getType() == Type.VARIABLE_FLOAT || e2.type.getType() == Type.VARIABLE_FLOAT)
+                    newType = new Type(Type.VARIABLE_FLOAT);
                 else
-                    newType = Type.VARIABLE_INT;
+                    newType = new Type(Type.VARIABLE_INT);
                 return new CompAttr(newType, label);
             case "L":
                 e1 = L(child.get(0), table);
-                if (e1.type == Type.VARIABLE_ARRAY) {
+                if (e1.type.getType() == Type.VARIABLE_ARRAY) {
                     throw new CodeGenException(String.format("Error at line %d: integer or float required.", token.getLine()));
                 }
                 label = newTemp();
@@ -220,15 +284,15 @@ public class SemanticAnalyzer {
                 SymbolTable.TableItem item = table.findItemByName(token.getValue());
                 if (item == null) {
                     throw new CodeGenException(String.format("Error at line %d: cannot find \"%s\"", token.getLine(), token.getValue()));
-                } else if (item.type != Type.VARIABLE_INT && item.type != Type.VARIABLE_FLOAT) {
-                    throw  new CodeGenException(String.format("Error at line %d: integer or float variable required", token.getLine()));
+                } else if (item.type.getType() != Type.VARIABLE_INT && item.type.getType() != Type.VARIABLE_FLOAT) {
+                    throw new CodeGenException(String.format("Error at line %d: integer or float variable required", token.getLine()));
                 } else {
                     return new CompAttr(item.type, item.getName());
                 }
             case "real":
-                return new CompAttr(Type.VARIABLE_FLOAT, token.getValue());
+                return new CompAttr(new Type(Type.VARIABLE_FLOAT), token.getValue());
             case "num":
-                return new CompAttr(Type.VARIABLE_INT, token.getValue());
+                return new CompAttr(new Type(Type.VARIABLE_INT), token.getValue());
             default:
                 throw new CodeGenException(String.format("Error at line %d: inner error!", token.getLine()));
         }
@@ -240,7 +304,7 @@ public class SemanticAnalyzer {
         switch (token.getName()) {
             case "B":
                 BCompAttr b1 = B(child.get(0), table);
-                int nextCode = nextCode();
+                int nextCode = nextCode() + 1;
                 BCompAttr b2 = B(child.get(2), table);
                 token = child.get(1).getValue();
                 if (token.getName().equals("&")) {
@@ -296,23 +360,37 @@ public class SemanticAnalyzer {
             return type.getWidth();
         } else {
             int width = A(child.get(0), table);
-            type = T(child.get(0), table);
+            type = T(child.get(1), table);
             token = child.get(2).getValue();
             table.addItem(table.new TableItem(type, token.getName()));
             return width + type.getWidth();
         }
     }
 
-    private int F(GrammerTree tree, SymbolTable table) {
+    private int F(GrammerTree tree, SymbolTable table, int width) {
         List<GrammerTree> child = tree.getChild();
         GrammerAnalyzer.Token token = child.get(0).getValue();
         if (token.getName().equals("F")) {
-            int temp = F(child.get(0), table);
+            if (width <= 1) {
+                throw new CodeGenException(String.format("Error at %d: too many arguments!", token.getLine()));
+            }
+            int temp = F(child.get(0), table, width - 1);
+            SymbolTable.TableItem item = table.itemList.get(width - 1);
             CompAttr b = E(child.get(1), table);
+            if (item.type.getType() != b.type.getType()) {
+                throw new CodeGenException(String.format("Error at line %d: Cannot match %dth parameter!", token.getLine(), width));
+            }
             codeList.add(String.format(paraCode, b.value));
             return temp + 1;
         } else {
+            if (width != 1) {
+                throw new CodeGenException(String.format("Error at %d: too few arguments!", token.getLine()));
+            }
+            SymbolTable.TableItem item = table.itemList.get(0);
             CompAttr b = E(child.get(0), table);
+            if (item.type.getType() != b.type.getType()) {
+                throw new CodeGenException(String.format("Error at line %d: Cannot match %dth parameter!", token.getLine(), width));
+            }
             codeList.add(String.format(paraCode, b.value));
             return 1;
         }
@@ -334,56 +412,54 @@ public class SemanticAnalyzer {
                     SymbolTable.TableItem item = table.findItemByName(token.getValue());
                     if (item == null) {
                         throw new CodeGenException(String.format("Error at line %d: cannot find symbol \"%s\"", token.getLine(), token.getValue()));
-                    } else if (item.type != Type.FUNCTION) {
+                    } else if (item.type.getType() != Type.FUNCTION) {
                         throw new CodeGenException(String.format("Error at line %d: \"%s\" is not a function name", token.getLine(), token.getValue()));
                     }
-                    int num = F(child.get(2), table);
+                    int num = F(child.get(2), table, item.type.getWidth());
                     codeList.add(String.format("(call, %s, %d, _)\t\t call %1$s, %2$d", token.getValue(), num));
                 } else {
                     SymbolTable.TableItem item = table.findItemByName(token.getValue());
                     if (item == null) {
                         throw new CodeGenException(String.format("Error at line %d: cannot find symbol \"%s\"", token.getLine(), token.getValue()));
-                    } else if (item.type == Type.FUNCTION) {
+                    } else if (item.type.getType() == Type.FUNCTION) {
                         throw new CodeGenException(String.format("Error at line %d: function \"%s\" not allowed here.", token.getLine(), token.getValue()));
                     }
                     CompAttr e = E(child.get(2), table);
-                    codeList.add(String.format("(=, %s, _, %s)\t\t %2$s = %1$s", e.value, token.getName()));
+                    //TODO
+                    codeList.add(String.format("(=, %s, _, %s)\t\t %2$s = %1$s", e.value, token.getValue()));
                 }
                 break;
             case "L":
                 CompAttr l = L(child.get(0), table);
                 CompAttr e = E(child.get(2), table);
-                if (l.type == Type.FUNCTION || l.type == Type.VARIABLE_ARRAY) {
-                    throw new CodeGenException(String.format("Error at line %d: Only integer or float are allowed here.", token.getLine()));
-                }
-                codeList.add(String.format("([]=, %s,%s, %s)\t\t %2$s[%3$s] = %1$s", e.value, l.value, l.id));
+                codeList.add(String.format("([]=, %s,%s, %s)\t\t %3$s[%2$s] = %1$s", e.value, l.value, l.id));
                 break;
             case "if":
                 if (child.size() == 7) {
                     BCompAttr b = B(child.get(2), table);
-                    fillList(b.trueList, Integer.toString(nextCode()), true);
+                    fillList(b.trueList, Integer.toString(nextCode() + 1), true);
                     S(child.get(5), table);
-                    fillList(b.trueList, Integer.toString(nextCode()), false);
+                    fillList(b.falseList, Integer.toString(nextCode() + 1), false);
                 } else {
                     BCompAttr b = B(child.get(2), table);
-                    fillList(b.trueList, Integer.toString(nextCode()), true);
+                    fillList(b.trueList, Integer.toString(nextCode() + 1), true);
                     S(child.get(5), table);
                     int end = nextCode();
                     codeList.add(String.format(dirCmpCode, "end"));
-                    fillList(b.falseList, Integer.toString(nextCode()), false);
+                    fillList(b.falseList, Integer.toString(nextCode() + 1), false);
                     S(child.get(9), table);
                     String endS = codeList.get(end);
                     codeList.add(end, endS.replace("end", Integer.toString(nextCode())));
-                    fillList(b.falseList, Integer.toString(nextCode()), false);
+                    fillList(b.falseList, Integer.toString(nextCode() + 1), false);
                 }
                 break;
             case "while":
-                int trueI = nextCode();
+                int trueI = nextCode() + 1;
                 BCompAttr b = B(child.get(2), table);
-                fillList(b.trueList, Integer.toString(nextCode()), true);
+                fillList(b.trueList, Integer.toString(nextCode() + 1), true);
                 S(child.get(5), table);
                 codeList.add(String.format(dirCmpCode, Integer.toString(trueI)));
-                fillList(b.falseList, Integer.toString(nextCode()), false);
+                fillList(b.falseList, Integer.toString(nextCode() + 1), false);
                 break;
         }
     }
@@ -402,16 +478,17 @@ public class SemanticAnalyzer {
             case "struct":
                 SymbolTable table = new SymbolTable();
                 token = child.get(1).getValue();
-                SymbolTable.TableItem item = table.new TableItem(Type.VARIABLE_STRUCT, token.getValue());
+                SymbolTable.TableItem item = table.new TableItem(new Type(Type.VARIABLE_STRUCT), token.getValue());
                 item.innerTable = table;
                 this.root.addItem(item);
                 table.setParent(this.root);
-                A(child.get(3), table);
+                int width = A(child.get(3), table);
+                item.type.setWidth(width);
                 break;
             case "function":
                 table = new SymbolTable();
                 token = child.get(1).getValue();
-                item = table.new TableItem(Type.FUNCTION, token.getValue());
+                item = table.new TableItem(new Type(Type.FUNCTION), token.getValue());
                 item.innerTable = table;
                 this.root.addItem(item);
                 table.setParent(this.root);
@@ -424,11 +501,13 @@ public class SemanticAnalyzer {
 
     /**
      * 将一棵语法分析树转换成三地址指令和四元式
+     *
      * @param root 一棵语法分析树的根
      */
-    public void parseGrammerTree(GrammerTree root){
+    public void parseGrammerTree(GrammerTree root) {
         P(root);
     }
+
     class BCompAttr {
         private List<Integer> trueList;
         private List<Integer> falseList;
@@ -488,7 +567,7 @@ public class SemanticAnalyzer {
         TableItem findItemByName(String name) {
             SymbolTable parent = this;
             while (parent != null) {
-                for (TableItem item : itemList) {
+                for (TableItem item : parent.itemList) {
                     if (item.name.equals(name)) {
                         return item;
                     }
@@ -496,6 +575,15 @@ public class SemanticAnalyzer {
                 parent = parent.parent;
             }
             return null;
+        }
+
+        boolean existId(String id) {
+            for (TableItem item : itemList) {
+                if (item.name.equals(id)) {
+                    return true;
+                }
+            }
+            return false;
         }
 
         class TableItem {
@@ -514,14 +602,5 @@ public class SemanticAnalyzer {
                 return name;
             }
         }
-    }
-}
-
-/**
- * 定义当语义分析阶段出现错误时抛出的异常。
- */
-class CodeGenException extends RuntimeException{
-    CodeGenException(String msg){
-        super(msg);
     }
 }
